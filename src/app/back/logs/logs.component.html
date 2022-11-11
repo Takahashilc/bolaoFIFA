@@ -1,0 +1,25 @@
+<div class="logs-header">
+    <h1 class="logs-title">Auditoria de logs</h1>
+    <p class="logs-text">Monitore qualquer ação feita pelos usuários do sistema.</p>
+  </div>
+  
+  <div class="date-filter">
+    <img src="assets/filter.svg" alt="Ícone de filtro">
+    <div class="date-picker">
+      <label for="date-picker">Filtrar data:</label>
+      <input [(ngModel)]="datepicker" id="date-picker" name="date-picker" type="date">
+      <button type="button" (click)="getLogsByDate()" class="date-filter-button">Buscar</button>
+    </div>
+  </div>
+  <ul>
+    <li *ngFor="let log of allLogs">
+      <div class="log-info">
+        <div class="log-date">
+          <span class="log-date">{{ log.date | date: 'dd/MM/yyyy' }}</span>
+          <span class="log-time">{{ log.date | date: 'HH:mm' }}</span>
+        </div>
+        <span class="log-user">{{ log.user }}</span>
+        <span class="log-action">{{ log.action }}</span>
+      </div>
+    </li>
+  </ul>

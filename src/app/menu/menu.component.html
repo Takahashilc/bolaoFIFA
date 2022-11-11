@@ -1,0 +1,31 @@
+<div class="menu-border">
+    <nav class="menu-container">
+      <ul class="links-container">
+        <li><a class="menu-link" [routerLink]="['/matches']" routerLinkActive="active">Partidas</a></li>
+        <li><a class="menu-link" [routerLink]="['/ranking']" routerLinkActive="active">Ranking</a></li>
+      </ul>
+      <ul class="profile-container cardpessoal">
+        <li>
+            <div class="perfil">
+              <p class="usuario">sonizku </p>
+              <p class="pontuacao">1 PTS</p>
+            </div>
+          </li>
+        <li>
+          <div class="admin-buttons administrador">
+            <button [routerLink]="['/logs']" routerLinkActive="botaoAdminOn" class="botaoAdmin">
+              <img src="assets/menu/log.svg" alt="" width="16" height="16">
+              Logs
+            </button>
+            <button [routerLink]="['/results']" routerLinkActive="botaoAdminOn" class="botaoAdmin">
+              <img src="assets/menu/arrow.svg" alt="" width="16" height="16">
+              Lançar
+            </button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>

@@ -1,0 +1,22 @@
+<div class="center-div">
+    <div class="single-auth-container">
+      <article class="single-auth-content">
+        <div class="auth-form-content">
+          <form class="auth-form">
+            <h1 class="logo">Bolão World Cup 2022</h1>
+            <fieldset class="auth-fieldset">
+              <legend class="subtitle-auth">Redefinir senha</legend>
+  
+              <p class="email-text">Digite o email da conta e será enviado um email com instruções para alteração de senha.</p>
+  
+              <label class="label-text" for="email">Email</label>
+              <input #emailModel="ngModel" [(ngModel)]="email" class="form-input" type="text" id="email" name="email" placeholder="Digite o email" required="true">
+              <app-vmessage *ngIf="emailModel.errors?.['required'] && emailModel.touched" message="Email obrigatório."></app-vmessage>
+  
+              <button (click)="sendPasswordResetLink()" class="button button-margin" type="submit">Enviar instruções</button>
+            </fieldset>
+          </form>
+        </div>
+      </article>
+    </div>
+  </div>

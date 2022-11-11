@@ -28,8 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/sass"
+              ],
             "scripts": []
           },
           "configurations": {
@@ -104,4 +109,4 @@
       }
     }
   }
-}
+}}

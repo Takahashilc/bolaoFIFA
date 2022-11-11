@@ -1,0 +1,19 @@
+<div class="admin-header">
+    <h1 class="admin-title">Admin</h1>
+    <label for="user-search">Pesquisa Usuario</label>
+  </div>
+  <div class="search">
+    <input #iptNickname type="text">
+    <button class="admin-button" type="button" (click)="findUserByNickname(iptNickname.value)">Buscar</button>
+  </div>
+  
+  <ul>
+    <li *ngFor="let user of users">
+      <div class="user-info">
+        <span>{{ user.id }}</span>
+        <span>{{ user.nickname }}</span>
+        <span>{{ user.email }}</span>
+        <button class="set-adm-button" (click)="setAdmin(user.id)" type="button">Tornar admin</button>
+      </div>
+    </li>
+  </ul>
